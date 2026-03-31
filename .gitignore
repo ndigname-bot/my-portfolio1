@@ -1,0 +1,25 @@
+﻿# Docker
+*.tar
+*.tar.gz
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local env files
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# Build outputs
+dist/
+build/
