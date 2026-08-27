@@ -49,7 +49,8 @@ const mobileMenu = document.getElementById('mobile-menu');
 
 if (menuToggle) {
     menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('translate-x-full');
+        mobileMenu.classList.toggle('translate-x-0');
         menuOpen.classList.toggle('hidden');
         menuClose.classList.toggle('hidden');
     });
@@ -57,9 +58,19 @@ if (menuToggle) {
     // Close menu when clicking a link (better UX)
     mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenu.classList.remove('translate-x-0');
             menuOpen.classList.remove('hidden');
             menuClose.classList.add('hidden');
         });
     });
 }
+
+// Spotlight Cursor Logic
+document.addEventListener('mousemove', (e) => {
+    const spotlight = document.getElementById('spotlight');
+    if (spotlight) {
+        spotlight.style.setProperty('--x', `${e.clientX}px`);
+        spotlight.style.setProperty('--y', `${e.clientY}px`);
+    }
+});

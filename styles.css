@@ -1,0 +1,40 @@
+/* Custom Spotlight Cursor */
+#spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background: radial-gradient(600px circle at var(--x, 50%) var(--y, 50%), rgba(59, 130, 246, 0.15), transparent 40%);
+    z-index: 9999;
+}
+
+/* Disable spotlight on mobile touch screens */
+@media (max-width: 768px) {
+    #spotlight {
+        display: none;
+    }
+}
+
+/* Glassmorphism for mobile menu */
+.glass-menu {
+    background: rgba(31, 41, 55, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+/* Project Cards glow on hover */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.5);
+}
+
+/* Testimonial Star */
+.star-icon {
+    color: #FBBF24;
+    width: 24px;
+    height: 24px;
+}

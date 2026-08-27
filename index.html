@@ -17,6 +17,7 @@
     <link rel="icon" type="image/png" href="images/portfolio.png">
 </head>
 <body class="bg-gray-900 text-gray-300 font-sans antialiased overflow-x-hidden">
+    <div id="spotlight"></div>
 
     <!-- Loading Animation (Full-screen fade out on load) - Simplified spinner for spectacular entry -->
     <div id="loader" class="fixed inset-0 bg-gray-900 flex items-center justify-center z-50">
@@ -35,6 +36,7 @@
             <li><a href="#skills" class="text-gray-300 hover:text-blue-400 transition-colors">Skills</a></li>
             <li><a href="#projects" class="text-gray-300 hover:text-blue-400 transition-colors">Projects</a></li>
             <li><a href="#contact" class="text-gray-300 hover:text-blue-400 transition-colors">Contact</a></li>
+            <li><a href="#" class="bg-blue-500/10 text-blue-400 border border-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded transition-colors duration-300">View Résumé</a></li>
         </ul>
 
         <!-- Hamburger button (visible only on mobile) -->
@@ -49,13 +51,14 @@
     </div>
 
     <!-- Mobile dropdown menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+    <div id="mobile-menu" class="fixed inset-y-0 right-0 z-40 w-64 glass-menu shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-20 border-l border-gray-700">
         <div class="container mx-auto px-4 py-6 flex flex-col space-y-6 text-center">
             <a href="#home" class="text-gray-300 hover:text-blue-400 text-lg transition-colors">Home</a>
             <a href="#about" class="text-gray-300 hover:text-blue-400 text-lg transition-colors">About</a>
             <a href="#skills" class="text-gray-300 hover:text-blue-400 text-lg transition-colors">Skills</a>
             <a href="#projects" class="text-gray-300 hover:text-blue-400 text-lg transition-colors">Projects</a>
             <a href="#contact" class="text-gray-300 hover:text-blue-400 text-lg transition-colors">Contact</a>
+            <a href="#" class="bg-blue-500/10 text-blue-400 border border-blue-500 hover:bg-blue-500 hover:text-white text-lg transition-colors py-2 px-4 rounded">View Résumé</a>
         </div>
     </div>
 </nav>
@@ -66,7 +69,7 @@
     <!-- Your background image with overlay -->
     <div class="absolute inset-0">
         <img 
-            src="images/profile.jpeg" 
+            src="images/port1.jpeg" 
             alt="Background" 
             class="w-full h-full object-cover opacity-40 scale-110 transition-transform duration-[20s] hover:scale-100"
             data-aos="zoom-in" 
@@ -78,7 +81,7 @@
 
     <!-- Your profile image (still fades in) -->
     <img 
-        src="images/profile.jpeg" 
+        src="images/port2.jpeg" 
         alt="Your Profile Image" 
         class="w-32 h-32 md:w-48 md:h-48 rounded-full mb-8 object-cover shadow-2xl shadow-blue-500/30 relative z-10" 
         data-aos="fade-in" 
@@ -275,39 +278,95 @@ document.addEventListener('DOMContentLoaded', () => {
     transform: translateY(0);
 }</style>
 
-   <section id="projects" class="py-20 bg-gray-800">
-    <div class="container mx-auto px-4" data-aos="zoom-in" data-aos-duration="1000">
-        <h2 class="text-4xl font-bold text-center text-blue-400 mb-10">Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- EDIT HERE: Add/edit project details, images, links. Replace 'project-image-1.jpg' with your actual image -->
-            <div class="bg-gray-900 p-4 rounded-lg shadow-md hover:scale-105 transition-transform duration-500" data-aos="fade-up" data-aos-delay="100">
-                <img src="images/Devops practice1.png" alt="Project 1" class="w-full h-48 object-cover mb-4 rounded">
-                <h3 class="text-xl font-semibold text-blue-400 mb-2">DevOps Automation</h3>
-                <p class="text-gray-300 mb-4">Implemented DevOps pipeline with security scans for AWS environments.</p>
-                <button onclick="openModal('project1')" class="text-blue-400 hover:underline">View Details</button>
+   
+<section id="projects" class="py-20 bg-gray-900 relative z-20">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-5xl font-bold text-center text-white mb-16" data-aos="fade-up">Featured <span class="text-blue-400">Works</span></h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+            <!-- Project 1: AWS / DevOps -->
+            <div class="project-card bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-3">AWS Infrastructure Automation</h3>
+                    <p class="text-gray-400 mb-6">Designed and deployed a highly available, fault-tolerant infrastructure on AWS. Integrated CI/CD pipelines using GitHub Actions for seamless backend deployments.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-gray-900 border border-gray-600 rounded-full text-xs font-semibold text-blue-300">AWS (EC2, S3, RDS)</span>
+                        <span class="px-3 py-1 bg-gray-900 border border-gray-600 rounded-full text-xs font-semibold text-blue-300">Terraform</span>
+                        <span class="px-3 py-1 bg-gray-900 border border-gray-600 rounded-full text-xs font-semibold text-blue-300">Docker</span>
+                    </div>
+                    <a href="#" class="text-blue-400 hover:text-blue-300 font-bold flex items-center transition-colors">
+                        View Project <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div>
             </div>
-             <div class="bg-gray-900 p-4 rounded-lg shadow-md hover:scale-105 transition-transform duration-500" data-aos="fade-up" data-aos-delay="100">
-                <img src="images/Devops practice2.png" alt="Project 1" class="w-full h-48 object-cover mb-4 rounded">
-                <h3 class="text-xl font-semibold text-blue-400 mb-2">Secure Cloud Deployment</h3>
-                <p class="text-gray-300 mb-4">Implemented DevOps pipeline with security scans for AWS environments.</p>
-                <button onclick="openModal('project1')" class="text-blue-400 hover:underline">View Details</button>
+
+            <!-- Project 2: Backend Security -->
+            <div class="project-card bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-3">Backend Security & API Defense</h3>
+                    <p class="text-gray-400 mb-6">Developed a secure RESTful API backend focusing on preventing OWASP Top 10 vulnerabilities. Implemented rate limiting, JWT authentication, and automated security scanning.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-gray-900 border border-gray-600 rounded-full text-xs font-semibold text-blue-300">Node.js / Express</span>
+                        <span class="px-3 py-1 bg-gray-900 border border-gray-600 rounded-full text-xs font-semibold text-blue-300">Python</span>
+                        <span class="px-3 py-1 bg-gray-900 border border-gray-600 rounded-full text-xs font-semibold text-blue-300">OWASP</span>
+                    </div>
+                    <a href="#" class="text-blue-400 hover:text-blue-300 font-bold flex items-center transition-colors">
+                        View Code <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div>
             </div>
-             <div class="bg-gray-900 p-4 rounded-lg shadow-md hover:scale-105 transition-transform duration-500" data-aos="fade-up" data-aos-delay="100">
-                <img src="project-image-1.jpg" alt="Project 1" class="w-full h-48 object-cover mb-4 rounded">
-                <h3 class="text-xl font-semibold text-blue-400 mb-2">cybersecurity</h3>
-                <p class="text-gray-300 mb-4">Tested several websites by breaking into them usually my own creation or by recommendation followwing legal requirement</p>
-                <button onclick="openModal('project1')" class="text-blue-400 hover:underline">View Details</button>
+            
+            <!-- Project 3: Identity Repo -->
+            <div class="project-card bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700" data-aos="fade-up" data-aos-delay="300">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-3">DevOps Identity Bot</h3>
+                    <p class="text-gray-400 mb-6">Built and configured an identity repository mapping cloud resources and establishing an automated footprint for professional DevOps networking.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-gray-900 border border-gray-600 rounded-full text-xs font-semibold text-blue-300">Git</span>
+                        <span class="px-3 py-1 bg-gray-900 border border-gray-600 rounded-full text-xs font-semibold text-blue-300">Markdown</span>
+                        <span class="px-3 py-1 bg-gray-900 border border-gray-600 rounded-full text-xs font-semibold text-blue-300">GitHub Actions</span>
+                    </div>
+                    <a href="https://github.com/ndigname-bot/ndigname-bot" target="_blank" class="text-blue-400 hover:text-blue-300 font-bold flex items-center transition-colors">
+                        View Repository <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div>
             </div>
-             <div class="bg-gray-900 p-4 rounded-lg shadow-md hover:scale-105 transition-transform duration-500" data-aos="fade-up" data-aos-delay="100">
-                <img src="images/webdev proj.jpg" alt="Project 3" class="w-full h-48 object-cover mb-4 rounded">
-                <h3 class="text-xl font-semibold text-blue-400 mb-2">Web development </h3>
-                <p class="text-gray-300 mb-4">created many web =sites for several clients including hotel booking sites, trading sites , valentine sites,management systemsand alot more .</p>
-                <button onclick="openModal('project1')" class="text-blue-400 hover:underline">View Details</button>
-            </div>
-            <!-- Add more project cards similarly, e.g., with unique IDs like 'project2' -->
         </div>
     </div>
 </section>
+
+<!-- Client Reviews Section (Stars) -->
+<section id="reviews" class="py-20 bg-gray-800 relative z-20">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-5xl font-bold text-center text-white mb-16" data-aos="fade-up">Client <span class="text-blue-400">Reviews</span></h2>
+        
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gray-900 p-8 rounded-xl border border-gray-700 shadow-xl" data-aos="fade-right">
+                <div class="flex space-x-1 mb-4">
+                    <svg class="star-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg class="star-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg class="star-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg class="star-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg class="star-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                </div>
+                <p class="text-gray-300 italic mb-4">"Exceptional DevOps work! Delivered our AWS infrastructure perfectly and locked down our backend API. Highly recommended."</p>
+                <p class="text-blue-400 font-semibold">- Tech Startup CTO</p>
+            </div>
+            <div class="bg-gray-900 p-8 rounded-xl border border-gray-700 shadow-xl" data-aos="fade-left" data-aos-delay="100">
+                <div class="flex space-x-1 mb-4">
+                    <svg class="star-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg class="star-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg class="star-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg class="star-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg class="star-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                </div>
+                <p class="text-gray-300 italic mb-4">"Super fast communication, incredibly secure code, and flawlessly handled our cloud migration. Will hire again!"</p>
+                <p class="text-blue-400 font-semibold">- E-Commerce Owner on Fiverr</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <!-- Modals (hidden initially) - Add one per project -->
 <div id="project1-modal" class="fixed inset-0 bg-gray-900/80 flex items-center justify-center z-50 hidden" onclick="closeModal('project1')">
