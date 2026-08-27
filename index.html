@@ -156,65 +156,87 @@ document.addEventListener('DOMContentLoaded', () => {
     </section>
 
     <!-- Skills Section (Fade-left effect, with hover transitions) -->
-    <section id="skills" class="py-20 bg-gray-900">
-    <div class="container mx-auto px-4" data-aos="fade-left" data-aos-duration="1000">
-        <h2 class="text-4xl font-bold text-center text-blue-400 mb-10">Skills</h2>
+    
+<section id="skills" class="py-20 bg-gray-900 relative z-20">
+    <div class="container mx-auto px-4 max-w-6xl" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="text-3xl md:text-5xl font-bold text-center text-gray-100 mb-16 glow-text-subtle">Technical <span class="text-blue-400">Arsenal</span></h2>
         
-        <!-- Skills will be typed here -->
-        <div id="skills-list" class="text-center mx-auto max-w-3xl text-gray-300 text-lg leading-relaxed">
-            <!-- Skills appear here via JS -->
-        </div>
-        
-        <!-- Progress bars still visible after typing -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-blue-500/50 transition-shadow duration-500 transform hover:-translate-y-1">
-                <h3 class="text-2xl font-semibold text-blue-400 mb-2">Cybersecurity</h3>
-                <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
-                    <div class="bg-blue-500 h-2.5 rounded-full transition-all duration-1000" style="width: 90%"></div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Skill 1 -->
+            <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 text-center transform transition duration-300 hover:scale-105 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 group">
+                <div class="text-blue-400 mb-4 group-hover:text-blue-300 transition-colors">
+                    <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                 </div>
-                <ul class="list-disc pl-5 text-gray-300">
-                    <li>Penetration Testing</li>
-                    <li>Firewall Management</li>
-                    <li>SIEM Tools</li>
-                </ul>
+                <h3 class="text-xl font-bold text-gray-200">AWS Cloud</h3>
+                <p class="text-sm text-gray-400 mt-2">EC2, S3, RDS, VPC</p>
             </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-blue-500/50 transition-shadow duration-500 transform hover:-translate-y-1">
-                <h3 class="text-2xl font-semibold text-blue-400 mb-2">DevOps</h3>
-                <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
-                    <div class="bg-blue-500 h-2.5 rounded-full transition-all duration-1000" style="width: 85%"></div>
+            
+            <!-- Skill 2 -->
+            <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 text-center transform transition duration-300 hover:scale-105 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 group">
+                <div class="text-blue-400 mb-4 group-hover:text-blue-300 transition-colors">
+                    <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
                 </div>
-                <ul class="list-disc pl-5 text-gray-300">
-                    <li>CI/CD Pipelines</li>
-                    <li>Kubernetes & Docker</li>
-                    <li>AWS/Azure</li>
-                </ul>
+                <h3 class="text-xl font-bold text-gray-200">Docker & K8s</h3>
+                <p class="text-sm text-gray-400 mt-2">Containerization</p>
             </div>
-             <div class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-blue-500/50 transition-shadow duration-500 transform hover:-translate-y-1">
-                <h3 class="text-2xl font-semibold text-blue-400 mb-2">Web development</h3>
-                <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
-                    <div class="bg-blue-500 h-2.5 rounded-full transition-all duration-1000" style="width: 75%"></div>
+            
+            <!-- Skill 3 -->
+            <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 text-center transform transition duration-300 hover:scale-105 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 group">
+                <div class="text-blue-400 mb-4 group-hover:text-blue-300 transition-colors">
+                    <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
                 </div>
-                <ul class="list-disc pl-5 text-gray-300">
-                    <li>building static websites</li>
-                    <li>building dynamic websites</li>
-                    <li>creating managent systems</li>
-                </ul>
+                <h3 class="text-xl font-bold text-gray-200">Cybersecurity</h3>
+                <p class="text-sm text-gray-400 mt-2">Pen-Testing, Firewalls</p>
             </div>
-             <div class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-blue-500/50 transition-shadow duration-500 transform hover:-translate-y-1">
-                <h3 class="text-2xl font-semibold text-blue-400 mb-2">multilinguist</h3>
-                <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
-                    <div class="bg-blue-500 h-2.5 rounded-full transition-all duration-1000" style="width: 50%"></div>
+            
+            <!-- Skill 4 -->
+            <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 text-center transform transition duration-300 hover:scale-105 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 group">
+                <div class="text-blue-400 mb-4 group-hover:text-blue-300 transition-colors">
+                    <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                 </div>
-                <ul class="list-disc pl-5 text-gray-300">
-                    <li>speaking English</li>
-                    <li>speaking in spanish</li>
-                    <li>speaking in chinese</li>
-                </ul>
+                <h3 class="text-xl font-bold text-gray-200">Linux / Bash</h3>
+                <p class="text-sm text-gray-400 mt-2">Server Administration</p>
             </div>
-            <!-- Add more categories if needed -->
+            
+            <!-- Skill 5 -->
+            <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 text-center transform transition duration-300 hover:scale-105 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 group">
+                <div class="text-blue-400 mb-4 group-hover:text-blue-300 transition-colors">
+                    <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-200">Backend APIs</h3>
+                <p class="text-sm text-gray-400 mt-2">Node.js, Express, Python</p>
+            </div>
+            
+            <!-- Skill 6 -->
+            <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 text-center transform transition duration-300 hover:scale-105 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 group">
+                <div class="text-blue-400 mb-4 group-hover:text-blue-300 transition-colors">
+                    <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-200">Databases</h3>
+                <p class="text-sm text-gray-400 mt-2">MongoDB, PostgreSQL</p>
+            </div>
+            
+            <!-- Skill 7 -->
+            <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 text-center transform transition duration-300 hover:scale-105 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 group">
+                <div class="text-blue-400 mb-4 group-hover:text-blue-300 transition-colors">
+                    <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-200">Frontend UI</h3>
+                <p class="text-sm text-gray-400 mt-2">React, Tailwind CSS</p>
+            </div>
+            
+            <!-- Skill 8 -->
+            <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 text-center transform transition duration-300 hover:scale-105 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 group">
+                <div class="text-blue-400 mb-4 group-hover:text-blue-300 transition-colors">
+                    <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-200">CI / CD</h3>
+                <p class="text-sm text-gray-400 mt-2">GitHub Actions, Terraform</p>
+            </div>
         </div>
     </div>
 </section>
+
     <style>/* Typing skills container */
 #skills-list {
     min-height: 120px; /* Adjust based on your content */
@@ -245,9 +267,9 @@ document.addEventListener('DOMContentLoaded', () => {
             
             <!-- Project 1: Cloud & DevOps (AWS Capstone) -->
             <div class="flex flex-col md:flex-row items-center relative" data-aos="fade-up">
-                <div class="w-full md:w-7/12 relative group cursor-pointer z-10" onclick="openModal('AWS Infrastructure Capstone', 'Architected a highly scalable static and dynamic backend environment using AWS. Configured EC2, S3, and load balancing for high availability.', 'images/webdev proj.png')">
+                <div class="w-full md:w-7/12 relative group cursor-pointer z-10" onclick="openModal('AWS Infrastructure Capstone', 'Architected a highly scalable static and dynamic backend environment using AWS. Configured EC2, S3, and load balancing for high availability.', 'images/aws_cloud.jpg')">
                     <div class="absolute inset-0 bg-blue-500/20 group-hover:bg-transparent transition duration-300 rounded-lg"></div>
-                    <img src="images/webdev proj.png" alt="Cloud Architect Proof" class="w-full h-auto rounded-lg shadow-2xl filter brightness-90 group-hover:brightness-100 transition duration-300 border border-gray-700">
+                    <img src="images/aws_cloud.jpg" alt="Cloud Architect Proof" class="w-full h-auto rounded-lg shadow-2xl filter brightness-90 group-hover:brightness-100 transition duration-300 border border-gray-700">
                 </div>
                 <div class="w-full md:w-6/12 md:-ml-12 mt-8 md:mt-0 relative z-20 md:text-right">
                     <p class="text-blue-400 font-mono text-sm mb-2">Cloud Architect / DevOps Engineer</p>
@@ -259,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span>AWS</span> <span>Terraform</span> <span>Nginx</span>
                     </div>
                     <div class="flex md:justify-end space-x-4">
-                        <button onclick="openModal('AWS Infrastructure Capstone', 'Architected a highly scalable static and dynamic backend environment using AWS. Configured EC2, S3, and load balancing for high availability.', 'images/webdev proj.png')" class="text-gray-400 hover:text-blue-400 transition-colors"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg></button>
+                        <button onclick="openModal('AWS Infrastructure Capstone', 'Architected a highly scalable static and dynamic backend environment using AWS. Configured EC2, S3, and load balancing for high availability.', 'images/aws_cloud.jpg')" class="text-gray-400 hover:text-blue-400 transition-colors"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg></button>
                     </div>
                 </div>
             </div>
@@ -308,21 +330,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <!-- Project 4: Freelance Designer & Content Creator -->
             <div class="flex flex-col md:flex-row-reverse items-center relative" data-aos="fade-up">
-                <div class="w-full md:w-7/12 relative group cursor-pointer z-10" onclick="openModal('Freelance Web Design', 'Designed high-converting landing pages, implemented brand identities, and managed digital content strategies for freelance clients.', 'images/freelance_design.jpg')">
+                <div class="w-full md:w-7/12 relative group cursor-pointer z-10" onclick="openModal('Full Stack Web Development', 'Built complete, responsive full-stack applications with robust backend databases and highly interactive user interfaces.', 'images/webdev proj.png')">
                     <div class="absolute inset-0 bg-blue-500/20 group-hover:bg-transparent transition duration-300 rounded-lg"></div>
-                    <img src="images/freelance_design.jpg" alt="Freelance Designer Proof" class="w-full h-auto rounded-lg shadow-2xl filter brightness-90 group-hover:brightness-100 transition duration-300 border border-gray-700">
+                    <img src="images/webdev proj.png" alt="Full Stack Web Developer Proof" class="w-full h-auto rounded-lg shadow-2xl filter brightness-90 group-hover:brightness-100 transition duration-300 border border-gray-700">
                 </div>
                 <div class="w-full md:w-6/12 md:-mr-12 mt-8 md:mt-0 relative z-20">
-                    <p class="text-blue-400 font-mono text-sm mb-2">Freelancer / Designer</p>
-                    <h3 class="text-2xl font-bold text-gray-100 mb-4 hover:text-blue-400 transition-colors cursor-pointer">Digital Web Experiences</h3>
+                    <p class="text-blue-400 font-mono text-sm mb-2">Full Stack Web Developer</p>
+                    <h3 class="text-2xl font-bold text-gray-100 mb-4 hover:text-blue-400 transition-colors cursor-pointer">Dynamic Web Applications</h3>
                     <div class="bg-gray-800 p-6 rounded-lg shadow-xl text-gray-400 mb-4 border border-gray-700/50 hover:shadow-blue-500/20 transition duration-300">
-                        Crafted beautiful, responsive, and high-performance digital experiences. Specializing in UI/UX wireframing, branding, and technical content creation that converts visitors into active users.
+                        Engineered responsive, high-performance full-stack web applications. Bridging the gap between sleek frontend user interfaces and robust, scalable backend database architectures.
                     </div>
                     <div class="flex flex-wrap gap-3 text-sm font-mono text-gray-300 mb-4">
-                        <span>Figma</span> <span>Tailwind CSS</span> <span>Content Strategy</span>
+                        <span>React</span> <span>Node.js</span> <span>MongoDB</span> <span>Tailwind</span>
                     </div>
                     <div class="flex space-x-4">
-                        <button onclick="openModal('Freelance Web Design', 'Designed high-converting landing pages, implemented brand identities, and managed digital content strategies for freelance clients.', 'images/freelance_design.jpg')" class="text-gray-400 hover:text-blue-400 transition-colors"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg></button>
+                        <button onclick="openModal('Full Stack Web Development', 'Built complete, responsive full-stack applications with robust backend databases and highly interactive user interfaces.', 'images/webdev proj.png')" class="text-gray-400 hover:text-blue-400 transition-colors"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg></button>
                     </div>
                 </div>
             </div>
