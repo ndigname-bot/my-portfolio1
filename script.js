@@ -74,3 +74,41 @@ document.addEventListener('mousemove', (e) => {
         spotlight.style.setProperty('--y', `${e.clientY}px`);
     }
 });
+
+// Modal Logic
+function openModal(title, description, imageSrc) {
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalDesc').innerText = description;
+    document.getElementById('modalImage').src = imageSrc;
+    
+    const modal = document.getElementById('projectModal');
+    const modalContent = document.getElementById('modalContentBlock');
+    
+    modal.classList.remove('hidden');
+    // slight delay to allow display block to apply before opacity transition
+    setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modalContent.classList.remove('scale-95');
+        modalContent.classList.add('scale-100');
+    }, 10);
+}
+
+function closeModal() {
+    const modal = document.getElementById('projectModal');
+    const modalContent = document.getElementById('modalContentBlock');
+    
+    modal.classList.add('opacity-0');
+    modalContent.classList.remove('scale-100');
+    modalContent.classList.add('scale-95');
+    
+    setTimeout(() => {
+        modal.classList.add('hidden');
+    }, 300); // match duration of transition
+}
+
+// Close modal if clicked outside
+document.getElementById('projectModal')?.addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeModal();
+    }
+});

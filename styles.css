@@ -38,3 +38,21 @@
     width: 24px;
     height: 24px;
 }
+
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+.floating-avatar {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+    0%, 100% { text-shadow: 0 0 5px rgba(59, 130, 246, 0.2); }
+    50% { text-shadow: 0 0 20px rgba(59, 130, 246, 0.6); }
+}
+.glow-text-subtle {
+    animation: pulse-subtle 3s infinite;
+}
