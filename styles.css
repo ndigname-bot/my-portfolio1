@@ -71,3 +71,20 @@
 .marquee-content:hover {
     animation-play-state: paused;
 }
+
+/* Social Bar Animation */
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.social-bar-animate {
+    animation: slideUpFade 1.5s ease-out forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
