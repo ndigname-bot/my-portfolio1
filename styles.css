@@ -56,3 +56,18 @@
 .glow-text-subtle {
     animation: pulse-subtle 3s infinite;
 }
+
+/* Infinite Marquee Animation */
+@keyframes scrollMarquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Scrolls half because we duplicated content */
+}
+
+.marquee-content {
+    display: flex;
+    width: max-content;
+    animation: scrollMarquee 20s linear infinite;
+}
+.marquee-content:hover {
+    animation-play-state: paused;
+}
